@@ -4,7 +4,7 @@ A simple chrome extension to send messages in discord channels using webhook fun
 ## Download & installation
 
 ##### Chromium based browser
-Download the latest release in the [releases section](https://github.com/besuper/TwitchNoSub/releases) or clone the repo.
+Download the latest release in the [releases section](https://github.com//releases) or clone the repo.
 
 You have to install the extension manually:
 
