@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discord Webhook Messenger</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #36393f;
+      color: #fff;
+      padding: 20px;
+      width: 300px;
+      height: auto; /* Allow height to adjust */
+      max-height: 400px; /* Limit max height */
+      overflow: hidden; /* Prevent overflow */
+      border-radius: 8px;
+      border: 2px solid #2f3136; /* Dark border */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    }
+
+    
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+
+    textarea {
+      width: 100%;
+      background-color: #2f3136;
+      color: #dcddde;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      resize: none; /* Disable resizing */
+      overflow: hidden; /* Hide overflow */
+      box-sizing: border-box; /* Include padding in width */
+    }
+
+    textarea:focus {
+      outline: none;
+      border: 1px solid #7289da;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #7289da;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #5b6eae;
+    }
+
+    button:active {
+      background-color: #4a5b99;
+    }
+
+    .icon {
+ 
+       width: 48px; /* Set width of the icon */
+    
+       height: 48px; /* Set height of the icon */
+
+       margin-left: 8px; /* Space between the icon and the text */
+
+    }
+
+     .heading {
+  
+        display: flex;
+
+        align-items: center; /* Aligns items vertically in the center */
+   
+        font-size: 24px;
+    
+        margin-bottom: 20px;
+
+    }
+     
+
+    #footer {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #72767d;
+      text-align: center;
+    }
+
+    #message { 
+      margin-top: 10px; 
+      padding: 5px; 
+      color: #fff; 
+      background-color: #2f3136; 
+      border: 1px solid #7289da; 
+      border-radius: 5px; 
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+   <h3 class="heading">
+ Webhook Messenger<img src="icons/icon48.png" alt="Logo" class="icon" /></h3>
+
+  <label for="webhookUrl">Webhook URL:</label>
+  <textarea id="webhookUrl" placeholder="Enter the Discord webhook URL here..."></textarea>
+
+  <label for="messageContent">Message:</label>
+  <textarea id="messageContent" placeholder="Enter your message here..."></textarea>
+  
+  <button id="sendMessageButton">Send Message</button>
+
+  <div id="message"></div> <!-- Message container -->
+
+  <div id="footer">Discord Webhook Messenger</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
